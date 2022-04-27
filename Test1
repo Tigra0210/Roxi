@@ -1,1 +1,17 @@
-Test str
+tickets = int(input("Введите количество билетов:"))
+price_1 = 1390
+price_2 = 990
+s = 0.1     # sale 10%
+age = int(input("Введите возраст:"))
+if age < 18:
+    print("Проход бесплатный")
+if age >= 18 or age < 25:
+    if tickets >= 3:
+        print("Итого со скидкой =", tickets*price_2 - (price_2*s), "руб.")
+    else:
+        print("Итого =", tickets*price_2, "руб.")
+if age >= 25:
+    if tickets >= 3:
+        print("Итого со скидкой =", price_1*tickets - (price_1*s), "руб.")
+    else:
+        print("Итоговая стоимость =", price_1 * tickets, "руб.")
